@@ -23,8 +23,10 @@ def featch_class(request):
         return render(request, 'class/index.html', context)
 
 def create_class(request):
+       form = StudentClass
+        
        context = {
-             "data": "this is create class form"
+             "form": "this is create class form"
         }
        
        return render(request, 'class/create.html', context)
