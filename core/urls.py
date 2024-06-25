@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from student.views import fetch_student
+# from student.views import fetch_student
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('student-list',fetch_student,name="fetch-student")
-    path('student/', include('student.urls'))
+    path('student/', include('student.urls')),
+    path('user/',include('user.urls')),
 ]
