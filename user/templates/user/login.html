@@ -81,6 +81,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
+        {{form.errors}}
         <form action="" method="post">
             {% csrf_token %}
             <div class="form-group">

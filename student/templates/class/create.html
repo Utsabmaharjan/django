@@ -1,7 +1,6 @@
-{{data}}
 <form method="post">
-   
-{% csrf_token %}   
- {{form}}    
-    <button type="submit">submit</button>   
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">submit</button>
 </form>
+{{forms.error}}

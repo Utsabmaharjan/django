@@ -1,16 +1,10 @@
 from django import forms
-from student.models import StudentClass, BroadwayStudent
+from student.models import StudentClass
 
 class StudentClassForm(forms.ModelForm):
-
-    
+    started_at = forms.DateField(widget=forms.DateInput())
     class Meta:
         model = StudentClass
-        fields = '__all__'
-
-class StudentForm(forms.ModelForm):
-
-    
-    class Meta:
-        model = BroadwayStudent
-        fields = '__all__'
+        # fields ='__all__'
+        exclude =['created_at']
+        # fields = ['name','ended_at']

@@ -50,7 +50,7 @@ tr:nth-child(even) {
     <td>{{i.status}}</td>
     <td>{{i.class_type}}</td>
     <td>{{i.class_link}}</td>
-    <td>{{i.started_at | date:"M d,Y"}}</td>
+    <td>{{i.started_at | date:"M d,Y"}} {{i.started_at | timesince}}ago</td>
     <td><a href="{% url 'edit_class' i.id %}"> Edit</a> | <a href="{% url 'delete_class' i.id %}"> Delete</a> </td>
 
   </tr>
